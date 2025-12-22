@@ -28,6 +28,26 @@
   color: #61dafb;
 }
 
+.tilt-card {
+  perspective: 1000px;
+}
+
+.tilt-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 1.25rem;
+  border: 4px solid #3b82f6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 3D tilt on hover */
+.tilt-card:hover .tilt-img {
+  transform: rotateX(10deg) rotateY(-10deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
