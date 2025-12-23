@@ -41,7 +41,7 @@ function FloatingNav() {
     return () => observer.disconnect();
   }, []);
 
-  const activeIndex = sections.findIndex((s) => s.id === active);
+  // const activeIndex = sections.findIndex((s) => s.id === active);
   const activeEl = itemRefs.current[active];
 
   return (
