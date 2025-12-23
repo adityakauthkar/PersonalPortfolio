@@ -5,14 +5,13 @@ import Skills from "./sections/skills";
 import Projects from "./sections/projects";
 import Contact from "./sections/contact";
 import FloatingNav from "./components/floatingNav";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/footer";
 
 function App() {
 
 
     
   return (
-    <BrowserRouter>
       <div className="mt-32">
         <Hero />
         <About />
@@ -20,8 +19,9 @@ function App() {
         <Projects />
         <Contact />
         <FloatingNav />
+        <Footer/>
+
       </div>
-    </BrowserRouter>
   );
 }
 

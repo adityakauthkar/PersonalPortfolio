@@ -2,7 +2,6 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import heroAnimation from "../assets/heroAnimation.json";
-import { useNavigate } from "react-router-dom";
 
 
 const texts = [
@@ -19,7 +18,6 @@ function Hero() {
   const [isDeleting, setIsDeleting] = useState(false);
 
 
-  const navigate = useNavigate();
   const handleClick = () => { 
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
 
