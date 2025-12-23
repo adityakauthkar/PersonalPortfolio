@@ -11,16 +11,16 @@ import {
 import { FaGithub, FaReact } from "react-icons/fa";
 import { TbBrandReactNative, TbBrandNodejs } from "react-icons/tb";
 import { GrMysql } from "react-icons/gr";
-import { FaCss3Alt } from "react-icons/fa6";
+import { FaCss3Alt } from "react-icons/fa6";  
 import { IoLogoJavascript } from "react-icons/io";
 
 function Skills() {
   return (
-    <section className="min-h-screen bg-bg text-white flex flex-col items-center justify-center px-6 md:px-16 py-16">
+    <section id="skills" className="min-h-screen bg-bg text-white flex flex-col items-center justify-center px-6 md:px-16 py-16">
       {/* Heading */}
       <div className="text-center mb-16">
         <h3 className="text-gray-400 text-lg tracking-wide">What Skills I Have</h3>
-        <h2 className="text-4xl md:text-5xl font-bold mt-2 text-white">My Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mt-2 text-white">My Experience</h2>
       </div>
 
       {/* Blocks */}

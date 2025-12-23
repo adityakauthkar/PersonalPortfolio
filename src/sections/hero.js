@@ -2,6 +2,8 @@ import React from "react";
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import heroAnimation from "../assets/heroAnimation.json";
+import { useNavigate } from "react-router-dom";
+
 
 const texts = [
   "i build websites using MERN ",
@@ -15,6 +17,14 @@ function Hero() {
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+
+
+  const navigate = useNavigate();
+  const handleClick = () => { 
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+
+}
+
 
   useEffect(() => {
     const currentText = texts[index];
@@ -40,7 +50,10 @@ function Hero() {
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, index]);
 
+
+
   return (
+    <section id="home" className="min-h-screen">
     <div className="bg-bg min-h-screen flex items-center justify-center ">
       <div className="text-center mb-16">
         <h1 className="text-white text-lg">Hello I'm</h1>
@@ -53,11 +66,11 @@ function Hero() {
         </h3>
 
         <div className="mt-6 flex justify-center gap-4" >
-          <button className="border-2 border-primary border-blue-500 text-white px-5 py-2 rounded-md  hover:bg-white ">
+          <button className="border-2 border-primary border-blue-500 text-white px-5 py-2 rounded-md  hover:bg-white "  onClick={() => window.open("/Aditya_Kauthkar_resume__.pdf")}>
             <span className="text-primary"> Download CV </span>  
           </button>
           
-          <button className="bg-primary   px-5 py-2 rounded-md hover:bg-white">
+          <button className="bg-primary   px-5 py-2 rounded-md hover:bg-white" onClick={handleClick} >
            <span className="text-bg">Let's Talk</span> 
           </button>
 
@@ -70,6 +83,7 @@ function Hero() {
 
       </div>
     </div>
+    </section>
   );
 }
 

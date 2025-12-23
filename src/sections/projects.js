@@ -14,21 +14,21 @@ function Projects() {
     {
       title: "Medcare Application",
       description:
-        "Healthcare app for booking appointments, managing patients, and viewing medical records.",
+        "Prescription scanning and ordering medicines , get nearest pharmacy stores and set reminders  .",
       github: "https://github.com/adityakauthkar/MedCare_Frontend",
       live: "#",
     },
     {
       title:"News Application ",
       description:
-       "News App.",
+       "News App built using React Native which shows real time news with options like favourites , comment and share.",
       github: "https://github.com/adityakauthkar/NewsApp/tree/master",
       live: "#",
     }
   ];
 
   return (
-    <section className="px-5 py-16 bg-bg text-white min-h-screen">
+    <section id="projects" className="px-5 py-16 bg-bg text-white min-h-screen">
       {/* Heading */}
       <div className="text-center mb-14">
         <span className="text-gray-400 block text-lg">My React Work</span>
@@ -54,8 +54,18 @@ function Projects() {
             </div>
           </div>
         ))}
+        
       </div>
+
+      <div className="flex justify-center align-center">
+        <button className=" bg-primary   px-5 py-2 rounded-md hover:bg-white mt-7  transition-all duration-300 shadow-lg  ">
+          <span className="text-bg">Show More</span>
+        </button>
+      </div>
+      
+        
     </section>
+    
   );
 }
 

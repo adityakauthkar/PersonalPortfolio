@@ -2,8 +2,13 @@ import React from "react";
 import profile_photo from "../assets/profile_photo.jpeg";
 
 function About() {
+
+const handleClick = ()=> { 
+document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+}
+
   return (
-    <section className="bg-bg text-white px-5 mb-16">
+    <section id="about" className="bg-bg text-white px-5 mb-16 min-h-screen">
       
       {/* Heading */}
       <div className="text-center mb-12">
@@ -46,6 +51,7 @@ function About() {
                 transition-all duration-300
                 hover:bg-white hover:text-black
               "
+              onClick={handleClick}
             >
               Let's Talk
             </button>
