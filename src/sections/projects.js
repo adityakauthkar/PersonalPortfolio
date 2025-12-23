@@ -4,7 +4,6 @@ import { FaLink } from "react-icons/fa6";
 import StudyNotion from "../assets/Screenshot (4).png";
 import News from "../assets/news.jpeg";
 import Medcare from "../assets/medcare.jpeg";
-import { image } from "framer-motion/client";
 
 function Projects() {
   const projectData = [
