@@ -1,6 +1,10 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
+import StudyNotion from "../assets/Screenshot (4).png";
+import News from "../assets/news.jpeg";
+import Medcare from "../assets/medcare.jpeg";
+import { image } from "framer-motion/client";
 
 function Projects() {
   const projectData = [
@@ -10,6 +14,7 @@ function Projects() {
         "A learning platform built using React with user authentication, course management, and dashboards.",
       github: "https://github.com/adityakauthkar/StudyNotion",
       live: "#",
+      image:StudyNotion,
     },
     {
       title: "Medcare Application",
@@ -17,6 +22,7 @@ function Projects() {
         "Prescription scanning and ordering medicines , get nearest pharmacy stores and set reminders  .",
       github: "https://github.com/adityakauthkar/MedCare_Frontend",
       live: "#",
+      image:Medcare,
     },
     {
       title:"News Application ",
@@ -24,6 +30,7 @@ function Projects() {
        "News App built using React Native which shows real time news with options like favourites , comment and share.",
       github: "https://github.com/adityakauthkar/NewsApp/tree/master",
       live: "#",
+      image:News,
     }
   ];
 
@@ -42,6 +49,11 @@ function Projects() {
             key={index}
             className="w-72 bg-bg-variant p-6 rounded-3xl hover:bg-bg transition transform hover:scale-105 hover:border border-blue-400 shadow-lg"
           >
+             <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-40 object-cover rounded-xl mb-4"
+  />
             <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
             <p className="text-gray-300 mb-4 text-sm md:text-base">{project.description}</p>
             <div className="flex gap-4 text-2xl">
